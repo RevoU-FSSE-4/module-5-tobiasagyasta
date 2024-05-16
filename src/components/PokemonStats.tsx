@@ -22,7 +22,7 @@ const PokemonStats = ({ stats }: any) => {
 						visualParts={[
 							{
 								percentage: `${stats[1].base_stat}%`,
-								color: "#FFC000",
+								color: "#ca8a04",
 							},
 						]}
 					></StatSlider>
