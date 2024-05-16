@@ -1,9 +1,8 @@
 import React from "react";
 import StatSlider from "./ui/stat-slider";
 
-const PokemonStats = () => {
+const PokemonStats = ({ stats }: any) => {
 	return (
-		//Need all stats
 		<>
 			<div className='grid grid-cols-3 gap-7 text-center mx-auto '>
 				<div>
@@ -11,8 +10,8 @@ const PokemonStats = () => {
 					<StatSlider
 						visualParts={[
 							{
-								percentage: "35%",
-								color: "#84cc16",
+								percentage: `${stats[0].base_stat}%`,
+								color: "#65a30d",
 							},
 						]}
 					></StatSlider>
@@ -22,8 +21,8 @@ const PokemonStats = () => {
 					<StatSlider
 						visualParts={[
 							{
-								percentage: "55%",
-								color: "#eab308",
+								percentage: `${stats[1].base_stat}%`,
+								color: "#FFC000",
 							},
 						]}
 					></StatSlider>
@@ -33,7 +32,7 @@ const PokemonStats = () => {
 					<StatSlider
 						visualParts={[
 							{
-								percentage: "40%",
+								percentage: `${stats[2].base_stat}%`,
 								color: "#ea580c",
 							},
 						]}
@@ -44,7 +43,7 @@ const PokemonStats = () => {
 					<StatSlider
 						visualParts={[
 							{
-								percentage: "50%",
+								percentage: `${stats[3].base_stat}%`,
 								color: "#2563eb",
 							},
 						]}
@@ -55,7 +54,7 @@ const PokemonStats = () => {
 					<StatSlider
 						visualParts={[
 							{
-								percentage: "50%",
+								percentage: `${stats[4].base_stat}%`,
 								color: "#86198f",
 							},
 						]}
@@ -66,7 +65,7 @@ const PokemonStats = () => {
 					<StatSlider
 						visualParts={[
 							{
-								percentage: "90%",
+								percentage: `${stats[5].base_stat}%`,
 								color: "#db2777",
 							},
 						]}

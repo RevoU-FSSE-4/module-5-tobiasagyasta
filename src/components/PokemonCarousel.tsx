@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-const PokemonCarousel = () => {
+const PokemonCarousel = ({ name, id }: any) => {
 	//Need only name and ID
 	return (
 		<>
@@ -17,9 +17,7 @@ const PokemonCarousel = () => {
 					<CarouselItem>
 						<Image
 							priority={true}
-							src={
-								"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
-							}
+							src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
 							alt='Picture of Pikachu (Front)'
 							width={300}
 							height={300}
@@ -28,9 +26,7 @@ const PokemonCarousel = () => {
 					<CarouselItem>
 						<Image
 							unoptimized={true}
-							src={
-								"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif"
-							}
+							src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${id}.gif`}
 							alt='Gif of Pikachu (3D)'
 							width={300}
 							height={300}
@@ -39,9 +35,7 @@ const PokemonCarousel = () => {
 					<CarouselItem>
 						<Image
 							unoptimized={true}
-							src={
-								"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif"
-							}
+							src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`}
 							alt='Gif of Pikachu (2D)'
 							width={300}
 							height={300}

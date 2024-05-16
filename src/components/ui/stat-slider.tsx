@@ -18,7 +18,7 @@ const StatSlider = ({
 		);
 	}, [visualParts]);
 	return (
-		<div className='flex  h-[8px] w-24 mt-2 border border-black bg-white'>
+		<div className='flex  h-[8px] w-28 mt-2 border border-black bg-white'>
 			{visualParts.map((item, index) => {
 				return (
 					<>
@@ -28,8 +28,10 @@ const StatSlider = ({
 							className='transition-[width]'
 						></div>
 						<p
-							className='mt-2 text-center outline-black'
-							style={{ color: item.color }}
+							className='mt-2 text-center font-extrabold text-xl outline-black'
+							style={{
+								color: item.color,
+							}}
 						>
 							{item.percentage.replaceAll("%", "")}
 						</p>
