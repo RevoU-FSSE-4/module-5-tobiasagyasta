@@ -9,9 +9,10 @@ import {
 import Image from "next/image";
 
 const PokemonCarousel = () => {
+	//Need only name and ID
 	return (
 		<>
-			<Carousel className='w-1/2 h-1/2 m-auto'>
+			<Carousel className='w-[42%] h-[50%] m-auto'>
 				<CarouselContent>
 					<CarouselItem>
 						<Image
@@ -30,7 +31,7 @@ const PokemonCarousel = () => {
 							src={
 								"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif"
 							}
-							alt='Gif of Pikachu (Front)'
+							alt='Gif of Pikachu (3D)'
 							width={300}
 							height={300}
 						></Image>
@@ -39,9 +40,9 @@ const PokemonCarousel = () => {
 						<Image
 							unoptimized={true}
 							src={
-								"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/25.gif"
+								"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif"
 							}
-							alt='Gif of Pikachu (Back)'
+							alt='Gif of Pikachu (2D)'
 							width={300}
 							height={300}
 						></Image>
