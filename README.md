@@ -1,6 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Toby's React Weather App
 
-## Getting Started
+### Module 5 Assignment for RevoU FSSE Amsterdam
+
+#### By Tobias Agyasta (Team 2)
+
+## Dependencies
+
+- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- This project was made with [React](https://react.dev/) and [Typescript](https://www.typescriptlang.org/).
+- This project uses [npm](https://www.npmjs.com/) to manage libraries, packages, and modules.
+- This project uses [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for its css styling.
+- This project uses [shadcn](https://ui.shadcn.com/) for UI components.
+- This project uses [Lucide](https://lucide.dev/) for its icons.
+- This project uses [PokeAPI](https://pokeapi.co/) for fetching the pokemon information and their images.
+
+## How to Open
 
 First, run the development server:
 
@@ -24,17 +38,17 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## About
 
-To learn more about Next.js, take a look at the following resources:
+![App Screenshot](public//PokesearchLogo.svg)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is a Pokemon search app that gives you detailed information about every Pokemon. This information is fetched using PokeAPI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The application has the following features:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Displaying a pokemon's name, description, type and ID.
+2. Displaying a pokemon's stats.
+3. Displaying a pokemon's abilities with hover cards that show you the ability description.
+4. Dynamic backgrounds based on a pokemon's type.
+5. Search functionality and search bar that gives suggestions to the user with Pokemons up to Generation 4 (#493)
+6. Left and right browsing buttons to switch through multiple pokemons quickly!
