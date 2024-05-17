@@ -64,7 +64,7 @@ const PokemonCard = ({ pokemonSpeciesData, pokemonData }: any) => {
 				>
 					<div className='flex flex-col'>
 						{pokemonData.abilities.map((ability: any, index: number) => (
-							<div className='my-2 flex  justify-start'>
+							<div key={index} className='my-2 flex  justify-start'>
 								<HoverCard>
 									<HoverCardTrigger>
 										<span className='font-semibold hover:underline'>
