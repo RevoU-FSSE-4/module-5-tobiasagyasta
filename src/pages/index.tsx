@@ -4,18 +4,16 @@ import PokemonCard from "@/components/PokemonCard";
 
 const inter = Inter({ subsets: ["latin"] });
 export const getServerSideProps = async (context: any) => {
-	const randomPokemonId = Math.floor(Math.random() * 493) + 1;
+	// const randomPokemonId = Math.floor(Math.random() * 493) + 1;
 	try {
 		const responseSpecies = await fetch(
-			`https://pokeapi.co/api/v2/pokemon-species/${randomPokemonId}`
+			`https://pokeapi.co/api/v2/pokemon-species/25`
 		);
 		if (!responseSpecies.ok) {
 			throw new Error("Network response was not ok");
 		}
 		const pokemonSpeciesData = await responseSpecies.json();
-		const responsePokemon = await fetch(
-			`https://pokeapi.co/api/v2/pokemon/${randomPokemonId}`
-		);
+		const responsePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/25`);
 		if (!responsePokemon.ok) {
 			throw new Error("Network response for pokemon was not ok");
 		}
@@ -65,10 +63,15 @@ export default function Home({ combinedData }: any) {
 	const { pokemonSpeciesData, pokemonData } = combinedData;
 	return (
 		<>
-			<PokemonCard
-				pokemonSpeciesData={pokemonSpeciesData}
-				pokemonData={pokemonData}
-			/>
+			<section className='flex flex-col justify-center items-center'>
+				<h1 className='font-extrabold leading-10 tracking-tight text-red-600 text-justify mt-8  sm:leading-none text-6xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
+					<span className='inline md:block '>Pokemon of the Day</span>
+				</h1>
+				<PokemonCard
+					pokemonSpeciesData={pokemonSpeciesData}
+					pokemonData={pokemonData}
+				/>
+			</section>
 		</>
 	);
 }

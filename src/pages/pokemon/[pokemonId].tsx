@@ -1,7 +1,11 @@
 import PokemonCard from "@/components/PokemonCard";
+import { Button } from "@/components/ui/button";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import { useRouter } from "next/router";
 
 export const getServerSideProps = async (context: any) => {
 	const { pokemonId } = context.params;
+
 	try {
 		const responseSpecies = await fetch(
 			`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`
@@ -60,8 +64,37 @@ export const getServerSideProps = async (context: any) => {
 
 const PokemonPage = ({ combinedData }: any) => {
 	const { pokemonSpeciesData, pokemonData } = combinedData;
+
+	const router = useRouter();
+	const handlePrevious = () => {
+		let previousId = pokemonSpeciesData.id - 1;
+		router.push(`${previousId}`);
+	};
+	const handleNext = () => {
+		let nextId = pokemonSpeciesData.id + 1;
+		router.push(`${nextId}`);
+	};
 	return (
 		<>
+			<div className='w-1/3 flex justify-around mx-auto mt-8'>
+				<Button
+					variant='outline'
+					size='icon'
+					className=' bg-slate-200 h-8 w-8'
+					onClick={handlePrevious}
+				>
+					<ChevronLeft className='h-5 w-5' />
+				</Button>
+
+				<Button
+					variant='outline'
+					size='icon'
+					className=' bg-slate-200 h-8 w-8 '
+					onClick={handleNext}
+				>
+					<ChevronRight className='h-5 w-5' />
+				</Button>
+			</div>
 			<PokemonCard
 				pokemonSpeciesData={pokemonSpeciesData}
 				pokemonData={pokemonData}

@@ -23,8 +23,6 @@ const PokemonCard = ({ pokemonSpeciesData, pokemonData }: any) => {
 	if (!pokemonSpeciesData && !pokemonData) {
 		return <div>Loading...</div>;
 	}
-	console.log(pokemonSpeciesData);
-	console.log(pokemonData);
 	const getColorHexByName = (colorName: string) => {
 		const color = colordata.find((color) => color.name === colorName);
 		return color ? color.color : null;
