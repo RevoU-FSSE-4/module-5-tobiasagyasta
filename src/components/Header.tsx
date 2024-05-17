@@ -42,7 +42,9 @@ const Header = () => {
 					<Link href={"/"}>
 						<Image
 							className='hover:cursor-pointer'
-							src={""}
+							src={
+								"https://raw.githubusercontent.com/tobiasagyasta/module-5-tobiasagyasta/main/public/PokesearchLogo.png"
+							}
 							alt='Pokesearch Logo'
 							width={175}
 							height={175}
