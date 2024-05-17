@@ -1,4 +1,4 @@
-# Toby's React Weather App
+# PokeSearch
 
 ### Module 5 Assignment for RevoU FSSE Amsterdam
 
@@ -52,3 +52,13 @@ The application has the following features:
 4. Dynamic backgrounds based on a pokemon's type.
 5. Search functionality and search bar that gives suggestions to the user with Pokemons up to Generation 4 (#493)
 6. Left and right browsing buttons to switch through multiple pokemons quickly!
+
+## Findings
+
+This project used some React components I reused from my previous [project](https://github.com/RevoU-FSSE-4/milestone-2-tobiasagyasta). I made this project to also compare the difference between using Vanilla React and Next JS.
+
+By using Next JS rather than React, I noticed some positive differences :
+
+- Automatic caching makes routing simple, quick, and efficient. When I did the React app, I did not implement a caching mechanism so I had to refetch data every time a user traverses to a previous page.
+- Simpler route mechanism. I had to use React router before, and with that I had to do more manually complicated things to route pages together.
+- In React, I had to use state to check for whether the data has been loaded or not. In Next JS, I didn't need to use state, since getServerSideProps and the SSR mechanism does all of the fetching and loading of the data for you, making development simpler.
