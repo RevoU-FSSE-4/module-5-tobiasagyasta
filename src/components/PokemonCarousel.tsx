@@ -18,7 +18,7 @@ const PokemonCarousel = ({ name, id }: any) => {
 						<Image
 							priority={true}
 							src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
-							alt='Picture of Pikachu (Front)'
+							alt={`Picture of ${name}`}
 							width={300}
 							height={300}
 						></Image>
@@ -27,7 +27,7 @@ const PokemonCarousel = ({ name, id }: any) => {
 						<Image
 							unoptimized={true}
 							src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${id}.gif`}
-							alt='Gif of Pikachu (3D)'
+							alt={`Gif of ${name} (3D)`}
 							width={300}
 							height={300}
 						></Image>
@@ -36,7 +36,7 @@ const PokemonCarousel = ({ name, id }: any) => {
 						<Image
 							unoptimized={true}
 							src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`}
-							alt='Gif of Pikachu (2D)'
+							alt={`Gif of ${name} (2D)`}
 							width={300}
 							height={300}
 						></Image>
