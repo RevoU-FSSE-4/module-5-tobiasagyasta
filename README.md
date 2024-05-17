@@ -5,6 +5,7 @@
 #### By Tobias Agyasta (Team 2)
 
 [Link to Netlify deployment](https://tobys-pokesearch.netlify.app/)
+
 ***Warning : Not yet optimized for mobile!***
 
 ## Dependencies
