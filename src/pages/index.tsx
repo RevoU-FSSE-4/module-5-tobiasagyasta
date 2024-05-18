@@ -35,6 +35,12 @@ export const getServerSideProps = async (context: any) => {
 						versionDetail.version_group.name === "platinum"
 				)
 			)
+			.filter((move: any) =>
+				move.version_group_details.some(
+					(versionDetail: any) =>
+						versionDetail.move_learn_method.name === "level-up"
+				)
+			)
 			.map((move: any) => ({
 				name: move.move.name,
 			}))
