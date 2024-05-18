@@ -17,7 +17,6 @@ const Header = () => {
 			setIsOpen(true);
 		}
 
-		// Filter countries and capitals based on user input
 		const filteredSuggestions = data.filter((pokemon) =>
 			pokemon.name
 				.trim()

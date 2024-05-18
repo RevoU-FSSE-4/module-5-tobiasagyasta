@@ -32,6 +32,18 @@ export const getServerSideProps = async (context: any) => {
 		const abilities = pokemonData.abilities.map(
 			(ability: any) => ability.ability.name
 		);
+		const moves = pokemonData.moves
+			.filter((move: any) =>
+				move.version_group_details.some(
+					(versionDetail: any) =>
+						versionDetail.version_group.name === "platinum"
+				)
+			)
+			.map((move: any) => ({
+				name: move.move.name,
+			}))
+			.slice(0, 10);
+
 		const { name, id, color, flavor_text_entries } = pokemonSpeciesData;
 		const flavorText = flavor_text_entries.find(
 			(entry: any) => entry.language.name === "en"
@@ -50,6 +62,7 @@ export const getServerSideProps = async (context: any) => {
 						stats,
 						typeNumbers,
 						abilities,
+						moves,
 					},
 				},
 			},

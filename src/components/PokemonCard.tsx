@@ -16,6 +16,7 @@ import PokemonStats from "./PokemonStats";
 import PokemonCarousel from "./PokemonCarousel";
 import PokemonType from "./PokemonType";
 import PokemonAbility from "./PokemonAbility";
+import PokemonMove from "./PokemonMove";
 import colordata from "../../public/PokemonColors.json";
 import { Separator } from "@radix-ui/react-separator";
 
@@ -70,11 +71,38 @@ const PokemonCard = ({ pokemonSpeciesData, pokemonData }: any) => {
 										<span className='font-semibold hover:underline'>
 											{index + 1}
 											{". "}
-											{ability.charAt(0).toUpperCase() + ability.slice(1)}
+											{(
+												ability.charAt(0).toUpperCase() + ability.slice(1)
+											).replaceAll("-", " ")}
 										</span>
 									</HoverCardTrigger>
 									<HoverCardContent>
 										<PokemonAbility abilityName={ability}></PokemonAbility>
+									</HoverCardContent>
+								</HoverCard>
+							</div>
+						))}
+					</div>
+					<Separator></Separator>
+					<h1 className='text-center mx-auto mt-12 mb-2 font-bold text-xl'>
+						Moves{" "}
+					</h1>
+					<Separator></Separator>
+					<div className='grid grid-rows-5 grid-flow-col justify-center items-center gap-3 mx-auto'>
+						{pokemonData.moves.map((move: any, index: number) => (
+							<div key={index} className='my-2   justify-start'>
+								<HoverCard>
+									<HoverCardTrigger>
+										<span className='font-semibold hover:underline'>
+											{index + 1}
+											{". "}
+											{(
+												move.name.charAt(0).toUpperCase() + move.name.slice(1)
+											).replaceAll("-", " ")}
+										</span>
+									</HoverCardTrigger>
+									<HoverCardContent>
+										<PokemonMove moveName={move.name}></PokemonMove>
 									</HoverCardContent>
 								</HoverCard>
 							</div>

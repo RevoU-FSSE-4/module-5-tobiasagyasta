@@ -1,15 +1,11 @@
-// components/PokemonAbility.tsx
-
 import React, { useState, useEffect } from "react";
 import { Skeleton } from "./ui/skeleton";
 
-// Define the type for the ability data
 interface Ability {
 	name: string;
 	effect: string;
 }
 
-// Define props type
 interface PokemonAbilityProps {
 	abilityName: string;
 }
